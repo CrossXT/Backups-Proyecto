@@ -12,8 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float fuerzaSalto = 5f;
     private bool puedeSaltar = true;
 
-    //private PlayerInputActions inputActions;
-
+    
 
     void Awake()
     {
@@ -41,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
         // 2) Conseguir que responda a la
         //    tecla deseada iniciando el salto
+
 
         // 3) Conseguir que se aplique gravedad
         //    para que el salto funcione de manera
