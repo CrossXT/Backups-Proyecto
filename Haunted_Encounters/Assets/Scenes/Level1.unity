@@ -929,7 +929,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c554849dabd7056418e5fa45fef524b6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1217,7 +1217,7 @@ GameObject:
   - component: {fileID: 706944653}
   m_Layer: 0
   m_Name: Escenario(Group)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1750,7 +1750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 0, z: -10}
+  m_FollowOffset: {x: 14.88, y: 0, z: 0}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1884,8 +1884,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0007994486, y: -0.0022476644, z: -0.0000017968968, w: 0.9999972}
-  m_LocalPosition: {x: 0.31, y: 4.03, z: -10}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 15.190001, y: 4.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2812,7 +2812,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 706944653}
+  m_LookAt: {fileID: 2136453247}
   m_Follow: {fileID: 2136453247}
   m_Lens:
     FieldOfView: 60.000004
@@ -2841,14 +2841,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675603988}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0007994486, y: -0.0022476644, z: -0.0000017968968, w: 0.9999972}
-  m_LocalPosition: {x: 0.31, y: 4.03, z: -10}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 15.190001, y: 4.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 937659337}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.092, y: -0.29, z: 0}
 --- !u!1001 &1754552719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3315,9 +3315,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34055fcc7de2b0a4fb2795f7d8729e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jump: {fileID: -4778055945412154743, guid: c84ed263d1d43044e8d92c267b5e2c39, type: 3}
+  Jump: {fileID: -4778055945412154743, guid: c84ed263d1d43044e8d92c267b5e2c39, type: 3}
+  jumpVerticalVelocity: 125
   velocidadConstante: {x: 0, y: 0, z: 5}
-  fuerzaSalto: 5
 --- !u!1001 &253494587334946599
 PrefabInstance:
   m_ObjectHideFlags: 0

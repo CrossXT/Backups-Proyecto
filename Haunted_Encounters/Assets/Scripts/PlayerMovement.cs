@@ -5,19 +5,23 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] InputActionReference jump;
+    [SerializeField] InputActionReference Jump;
+    [SerializeField] float jumpVerticalVelocity = 10f;
 
     public Vector3 velocidadConstante = new Vector3(5, 0, 0); // Velocidad constante en X y Z
     private Rigidbody rb;
-    public float fuerzaSalto = 5f;
-    private bool puedeSaltar = true;
+    private bool isGrounded = false;
 
-    
+    float currentVerticalVelocity;
+
+
+    private PlayerMovement inputActions;
+
+
 
     void Awake()
     {
-        //inputActions = new PlayerInputActions();
-        //inputActions.Player.Jump.performed += _ => Saltar();
+
     }
     // Start is called before the first frame update
     void Start()
@@ -27,31 +31,62 @@ public class PlayerMovement : MonoBehaviour
 
     void OnEnable()
     {
-        jump.action.Enable();
+        Jump.action.Enable();
 
     }
     // Update is called once per frame
+
+    const float gravity = -10f;
+    bool mustJump = false;
     void Update()
     {
-        // 1) Conseguir que avance a una
-        //    velocidad constante
-
-        rb.velocity = new Vector3(velocidadConstante.x, rb.velocity.y, velocidadConstante.z);
-
-        // 2) Conseguir que responda a la
-        //    tecla deseada iniciando el salto
+        //Velocidad Constante
+        rb.velocity = new Vector3(velocidadConstante.x, currentVerticalVelocity, velocidadConstante.z);
 
 
-        // 3) Conseguir que se aplique gravedad
-        //    para que el salto funcione de manera
-        //    automática
+        //Salto
+        if (Jump.action.WasPressedThisFrame())
+            { mustJump = true; }
 
-        // !!4) Conseguir que el personaje
-        //    no se meta dentro del terreno
+        currentVerticalVelocity += gravity * Time.deltaTime;
+        if (isGrounded)
+            { currentVerticalVelocity = 0f; }
+    }
+
+    private void FixedUpdate()
+    {
+        if (mustJump)
+        {
+            mustJump = false;
+            Saltar(); 
+        }
+    }
+
+
+    void Saltar()
+    {
+        Debug.Log("Saltar");
+        if (isGrounded)
+        {
+            Debug.Log("Saltar + isGrounded");
+            rb.AddForce(Vector3.up * jumpVerticalVelocity, ForceMode.Impulse);
+            isGrounded = false; // Deshabilitar el salto hasta que vuelva a estar en el suelo
+        }
+
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Terrain")) // Comparar tag para que salte una vez
+        {
+            isGrounded = true;
+        }
     }
     void OnDisable()
     {
-        jump.action.Disable();
+        Jump.action.Disable();
     }
+
+
 
 }
