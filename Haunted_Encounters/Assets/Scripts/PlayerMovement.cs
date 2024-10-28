@@ -12,6 +12,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private bool isGrounded = false;
 
+    public Material materialGrounded;
+    public Material materialNoGrounded;
+
+    public Transform model;
+
+    private Renderer r;
+
     float currentVerticalVelocity;
 
 
@@ -27,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        r = model.GetComponent<Renderer>();
     }
 
     void OnEnable()
@@ -36,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
     }
     // Update is called once per frame
 
-    const float gravity = -10f;
+    const float gravity = -50f;
     bool mustJump = false;
     void Update()
     {
@@ -51,6 +59,31 @@ public class PlayerMovement : MonoBehaviour
         currentVerticalVelocity += gravity * Time.deltaTime;
         if (isGrounded)
             { currentVerticalVelocity = 0f; }
+
+        RaycastHit hit;
+
+        if(Physics.Raycast(transform.position, -Vector3.up, out hit))
+        {
+            Debug.Log("Hit distance "+ hit.distance);
+
+            if(hit.distance < 0.55f)
+            {
+                Debug.Log("Grounded");
+                r.material = materialGrounded;
+            }
+            else
+            {
+                Debug.Log("No grounded");
+                r.material = materialNoGrounded;
+            }
+        }
+        else
+        {
+            Debug.Log("No hit");
+            Debug.Log("No grounded");
+            r.material = materialNoGrounded;
+         }
+
     }
 
     private void FixedUpdate()
