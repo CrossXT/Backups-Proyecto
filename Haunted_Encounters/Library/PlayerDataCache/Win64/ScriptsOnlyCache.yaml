@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - Gamelogic
     - PlayerJump
     - PlayerMovement
+    - PotionSpawn
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineComposer
@@ -144,24 +145,28 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 17786}
+      Script: {instanceID: 17370}
     - Class: 114
-      Script: {instanceID: 17932}
+      Script: {instanceID: 17788}
     - Class: 114
-      Script: {instanceID: 18074}
+      Script: {instanceID: 17934}
     - Class: 114
-      Script: {instanceID: 19124}
+      Script: {instanceID: 18076}
     - Class: 114
-      Script: {instanceID: 19222}
+      Script: {instanceID: 19126}
     - Class: 114
-      Script: {instanceID: 20296}
+      Script: {instanceID: 19224}
     - Class: 114
-      Script: {instanceID: 21304}
+      Script: {instanceID: 20298}
     - Class: 114
-      Script: {instanceID: 22314}
+      Script: {instanceID: 21306}
     - Class: 114
-      Script: {instanceID: 22676}
+      Script: {instanceID: 22318}
+    - Class: 114
+      Script: {instanceID: 22680}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -195,29 +200,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16690}
     - Class: 114
-      Script: {instanceID: 17372}
+      Script: {instanceID: 17374}
     - Class: 114
-      Script: {instanceID: 17862}
+      Script: {instanceID: 17864}
     - Class: 114
-      Script: {instanceID: 18084}
+      Script: {instanceID: 18086}
     - Class: 114
-      Script: {instanceID: 18418}
+      Script: {instanceID: 18420}
     - Class: 114
-      Script: {instanceID: 19460}
+      Script: {instanceID: 19462}
     - Class: 114
-      Script: {instanceID: 19584}
+      Script: {instanceID: 19586}
     - Class: 114
-      Script: {instanceID: 19878}
+      Script: {instanceID: 19880}
     - Class: 114
-      Script: {instanceID: 20618}
+      Script: {instanceID: 20620}
     - Class: 114
-      Script: {instanceID: 20706}
+      Script: {instanceID: 20708}
     - Class: 114
-      Script: {instanceID: 21336}
+      Script: {instanceID: 21338}
     - Class: 114
-      Script: {instanceID: 21532}
+      Script: {instanceID: 21534}
     - Class: 114
-      Script: {instanceID: 21894}
+      Script: {instanceID: 21896}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -241,7 +246,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -249,9 +258,35 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 16690}
+    - Class: 114
+      Script: {instanceID: 17864}
+    - Class: 114
+      Script: {instanceID: 18086}
+    - Class: 114
+      Script: {instanceID: 20708}
+    - Class: 114
+      Script: {instanceID: 21338}
+    - Class: 114
+      Script: {instanceID: 21534}
+    - Class: 114
+      Script: {instanceID: 21896}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -386,6 +421,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerEnterMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 173759cf4a7341ef70a72d2b14c776d3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PotionSpawn
   - hash:
       serializedVersion: 2
       Hash: 0c6de72eaf8c1070da824268c4bfad9d
@@ -1390,6 +1431,12 @@ ScriptsOnlyBuild:
     className: PlayerInputEditor
   - hash:
       serializedVersion: 2
+      Hash: 0ddedb46a2ff61f2b4de0f3498d6296a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UIManager
+  - hash:
+      serializedVersion: 2
       Hash: a92561298b80715aa69e8fa770123cb5
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.UI.Editor
@@ -1778,4 +1825,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level1.unity
   - Assets/Scenes/Settings.unity
   - Assets/Scenes/Credits.unity
-  playerPath: C:/Users/Alumno/Desktop/Proyecto(Build)/Haunted_Encounters.exe
+  playerPath: D:/Joan Martinez/M13/Entrega_Semana3+4/Haunted_Encounters.exe

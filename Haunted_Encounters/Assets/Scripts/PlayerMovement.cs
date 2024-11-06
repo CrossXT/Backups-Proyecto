@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 velocidadConstante = new Vector3(5, 0, 0); // Velocidad constante en X y Z
     private Rigidbody rb;
     private bool isGrounded = false;
+    private bool isJumping = false;
 
     public Material materialGrounded;
     public Material materialNoGrounded;
@@ -44,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     }
     // Update is called once per frame
 
-    const float gravity = -50f;
+    const float gravity = -20f;
     bool mustJump = false;
     void Update()
     {
@@ -58,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
         currentVerticalVelocity += gravity * Time.deltaTime;
         if (isGrounded)
-            { currentVerticalVelocity = 0f; }
+            { currentVerticalVelocity = 0f; Debug.Log("Stopped " + Time.realtimeSinceStartup); }
 
         RaycastHit hit;
 

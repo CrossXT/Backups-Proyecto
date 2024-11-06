@@ -364,6 +364,8 @@
 -analyzer:"C:/Program Files/Unity 2022.3.21f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/EnemiesCollision.cs"
 "Assets/Scripts/Gamelogic.cs"
+"Assets/Scripts/MainMenu.cs"
+"Assets/Scripts/NavigateToAfterTimeOrPress.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/PotionSpawn.cs"
 "Assets/Scripts/UIManager.cs"
