@@ -365,6 +365,7 @@
 "Assets/Scripts/EnemiesCollision.cs"
 "Assets/Scripts/Gamelogic.cs"
 "Assets/Scripts/LevelSelector.cs"
+"Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/NavigateToAfterTimeOrPress.cs"
 "Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/PlayerMovement.cs"
