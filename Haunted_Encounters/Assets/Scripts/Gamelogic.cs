@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,8 +32,16 @@ public class Gamelogic : MonoBehaviour
         SceneManager.LoadScene("Credits");
     }
 
-    public void ExitScene()
+    public void LoadExit()
     {
+        
+        #if UNITY_EDITOR
+
+        EditorApplication.isPlaying = false;
+
+        #endif
+
         Application.Quit();
+
     }
 }
