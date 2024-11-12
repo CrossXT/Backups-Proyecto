@@ -1,29 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\",
+  "WorkspaceRootPath": "C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|c:\\users\\usuario\\onedrive\\escritorio\\cole\\backups_proyecto\\backups-proyecto\\haunted_encounters\\assets\\scripts\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\backups-proyecto\\haunted_encounters\\assets\\scripts\\portalchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\portalchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|c:\\users\\usuario\\onedrive\\escritorio\\cole\\backups_proyecto\\backups-proyecto\\haunted_encounters\\assets\\scripts\\levelselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\assets\\scripts\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\assets\\scripts\\navigatetoaftertimeorpress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|c:\\users\\alumno\\documents\\github\\backups-proyecto\\haunted_encounters\\assets\\scripts\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\assets\\scripts\\levelselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\assets\\scripts\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\assets\\scripts\\navigatetoaftertimeorpress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\navigatetoaftertimeorpress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\assets\\scripts\\potionspawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\assets\\scripts\\potionspawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8A2B098-F77E-0C5A-743A-40BB74470DA7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\potionspawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,38 +42,50 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "LevelSelector.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\LevelSelector.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\LevelSelector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LevelSelector.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\LevelSelector.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\LevelSelector.cs",
               "RelativeToolTip": "Assets\\Scripts\\LevelSelector.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAAwBEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T13:18:47.319Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PortalChange.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\PortalChange.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PortalChange.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\PortalChange.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PortalChange.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:09:42.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PauseMenu.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\PauseMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\PauseMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PauseMenu.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\PauseMenu.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\PauseMenu.cs",
               "RelativeToolTip": "Assets\\Scripts\\PauseMenu.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwCAAAAAFAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwCAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T19:37:31.928Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Gamelogic.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\Gamelogic.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\Gamelogic.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Gamelogic.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\Gamelogic.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\Gamelogic.cs",
               "RelativeToolTip": "Assets\\Scripts\\Gamelogic.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -77,23 +93,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\PlayerMovement.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\PlayerMovement.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAwwEMAAAA1AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHgAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T11:58:30.658Z"
+              "WhenOpened": "2024-11-06T11:58:30.658Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "NavigateToAfterTimeOrPress.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\NavigateToAfterTimeOrPress.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\NavigateToAfterTimeOrPress.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NavigateToAfterTimeOrPress.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\NavigateToAfterTimeOrPress.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\NavigateToAfterTimeOrPress.cs",
               "RelativeToolTip": "Assets\\Scripts\\NavigateToAfterTimeOrPress.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAowC8AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -101,11 +118,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PotionSpawn.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\PotionSpawn.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\PotionSpawn.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PotionSpawn.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\Cole\\Backups_Proyecto\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\PotionSpawn.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\Backups-Proyecto\\Haunted_Encounters\\Assets\\Scripts\\PotionSpawn.cs",
               "RelativeToolTip": "Assets\\Scripts\\PotionSpawn.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
