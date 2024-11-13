@@ -1,0 +1,54 @@
+{
+    "name": "BatControls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "147770ed-4767-4884-a39c-54d4e11c5db4",
+            "actions": [
+                {
+                    "name": "UpArrow",
+                    "type": "Button",
+                    "id": "5ad559cc-05a8-46fe-9d28-a68770e6e9c9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DownArrow",
+                    "type": "Button",
+                    "id": "8ad80061-21ab-4724-b76d-ab8199f5dc5c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3c1c07e4-2e29-4b9b-a691-f98b63509cb6",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpArrow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ab81702c-2840-4e6b-91ea-373e129630c6",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DownArrow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using Cinemachine;
 
 public class PortalChange : MonoBehaviour
 {
@@ -6,7 +7,11 @@ public class PortalChange : MonoBehaviour
     public GameObject formaOriginal; // Primer modelo del jugador
     public GameObject formaAlternativa; // Segundo modelo del jugador
 
-    private bool isAlternateForm = false; // Para alternar entre las formas
+    public CinemachineVirtualCamera cam;
+
+    public bool isAlternateForm = false; // Para alternar entre las formas
+    private bool ToggleDone = false;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,7 +19,11 @@ public class PortalChange : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Jugador atravesó el portal.");
-            TogglePlayerForm();
+            if(ToggleDone == false)
+            {
+                TogglePlayerForm();
+            }
+            
         }
     }
 
@@ -27,6 +36,12 @@ public class PortalChange : MonoBehaviour
             Debug.Log("Cambiando a la forma original.");
             formaOriginal.SetActive(true);
             formaAlternativa.SetActive(false);
+            formaOriginal.transform.position = formaAlternativa.transform.position;
+            cam.Follow = formaOriginal.transform;
+            cam.LookAt = formaOriginal.transform;
+
+            ToggleDone = true;
+            
         }
         else
         {
@@ -34,6 +49,11 @@ public class PortalChange : MonoBehaviour
             Debug.Log("Cambiando a la forma alternativa.");
             formaOriginal.SetActive(false);
             formaAlternativa.SetActive(true);
+            formaAlternativa.transform.position = formaOriginal.transform.position;
+            cam.Follow = formaAlternativa.transform;
+            cam.LookAt = formaAlternativa.transform;
+
+            ToggleDone = true;
         }
 
         // Cambiar el estado para la próxima vez que pase por el portal
