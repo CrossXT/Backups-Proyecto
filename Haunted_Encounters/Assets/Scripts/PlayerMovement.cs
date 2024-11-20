@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] InputActionReference Jump;
+    [SerializeField] InputActionReference UseGreenPotion;
+    [SerializeField] InputActionReference UseRedPotion;
+    [SerializeField] InputActionReference UseBluePotion;
+
     [SerializeField] float jumpVerticalVelocity = 10f;
 
     public Vector3 velocidadConstante = new Vector3(5, 0, 0); // Velocidad constante en X y Z
@@ -19,6 +23,12 @@ public class PlayerMovement : MonoBehaviour
     public Transform model;
 
     private Renderer r;
+
+    private int effectTimer = 10;
+
+    private int CurrentEffect = -1;
+
+    private int jumpCount;
 
     //float currentVerticalVelocity;
 
@@ -66,29 +76,28 @@ public class PlayerMovement : MonoBehaviour
 
         if(Physics.Raycast(transform.position, -Vector3.up, out hit))
         {
-            Debug.Log("Hit distance "+ hit.distance);
+
 
             if(hit.distance < 0.55f)
             {
-                Debug.Log("Grounded");
+
                 r.material = materialGrounded;
             }
             else
             {
-                Debug.Log("No grounded");
+  
                 r.material = materialNoGrounded;
             }
         }
         else
         {
-            Debug.Log("No hit");
-            Debug.Log("No grounded");
+
             r.material = materialNoGrounded;
         }
 
         if (Physics.Raycast(transform.position, Vector3.forward, out hit))
         {
-            Debug.Log("Hit distance " + hit.distance);
+    
             
 
             if (hit.distance < 0.55f)
@@ -98,10 +107,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            Debug.Log("No hit");
-            Debug.Log("No grounded");
+
             r.material = materialNoGrounded;
         }
+
+
+        PotionInventory();
 
     }
 
@@ -117,10 +128,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Saltar()
     {
-        Debug.Log("Saltar");
-        if (isGrounded)
+        //&& jumpCount == 1
+        if (CurrentEffect == 1)
         {
-            Debug.Log("Saltar + isGrounded");
+            Debug.Log("Saltar + efecto de pocion");
             rb.AddForce(Vector3.up * jumpVerticalVelocity, ForceMode.Impulse);
             isGrounded = false; // Deshabilitar el salto hasta que vuelva a estar en el suelo
         }
@@ -139,11 +150,38 @@ public class PlayerMovement : MonoBehaviour
         Jump.action.Disable();
     }
 
-
     public void PotionInventory()
     {
+        GameObject UImenu;
+        UIManager UIComponent;
+
+        UImenu = GameObject.FindGameObjectWithTag("UI");
+
+        UIComponent = UImenu.GetComponent<UIManager>();
 
 
+        Debug.Log("Entrando en el inventario" + UIComponent.GreenPotionCollected);
+        if(UseGreenPotion.action.WasPressedThisFrame() && UIComponent.GreenPotionCollected > 0)
+        {
+            Debug.Log("Entrando en pocion verde");
+            //el player tiene pociones verdes y aplicaria su respectivo efecto
+            CurrentEffect = 1;
+            
+
+            UIComponent.RemoveGreenPotion();
+        }
+        else if(UseBluePotion.action.WasPressedThisFrame() && UIComponent.BluePotionCollected > 0)
+        {
+            //el player tiene pociones azules y aplicaria su efecto
+
+            UIComponent.RemoveBluePotion();
+        }
+        else if(UseRedPotion.action.WasPressedThisFrame() && UIComponent.RedPotionCollected > 0)
+        {
+            //el player tiene pociones rojas y aplicaria su efecto
+
+            UIComponent.RemoveRedPotion();
+        }
     }
 
 

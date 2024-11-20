@@ -9,9 +9,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI redPotionText;
     [SerializeField] TextMeshProUGUI bluePotionText;
 
-    [SerializeField] int GreenPotionCollected;
-    [SerializeField] int RedPotionCollected;
-    [SerializeField] int BluePotionCollected;
+     public int GreenPotionCollected;
+     public int RedPotionCollected;
+     public int BluePotionCollected;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,13 +36,43 @@ public class UIManager : MonoBehaviour
         GreenPotionCollected++;
     }
 
+    public void RemoveGreenPotion()
+    {
+        GreenPotionCollected--;
+
+        if(GreenPotionCollected < 0 )
+        {
+            GreenPotionCollected = 0;
+        }
+    }
+
     public void AddBluePotion()
     {
         BluePotionCollected++;
     }
 
+    public void RemoveBluePotion()
+    {
+        BluePotionCollected--;
+
+        if (BluePotionCollected < 0)
+        {
+            BluePotionCollected = 0;
+        }
+    }
+
     public void AddRedPotion()
     {
         RedPotionCollected++;
+    }
+
+    public void RemoveRedPotion()
+    {
+        RedPotionCollected--;
+
+        if (RedPotionCollected < 0)
+        {
+            RedPotionCollected = 0;
+        }
     }
 }

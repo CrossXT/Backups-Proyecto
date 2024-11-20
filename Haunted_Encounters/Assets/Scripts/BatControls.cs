@@ -44,6 +44,15 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseRedPotion"",
+                    ""type"": ""Button"",
+                    ""id"": ""9400621f-eb0d-4368-95e7-8fa88d1c3616"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -68,6 +77,17 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
                     ""action"": ""DownArrow"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bb4cd728-9758-4310-9cc0-ffd6bf3b4045"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseRedPotion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -78,6 +98,7 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
         m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
         m_Gameplay_UpArrow = m_Gameplay.FindAction("UpArrow", throwIfNotFound: true);
         m_Gameplay_DownArrow = m_Gameplay.FindAction("DownArrow", throwIfNotFound: true);
+        m_Gameplay_UseRedPotion = m_Gameplay.FindAction("UseRedPotion", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -141,12 +162,14 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
     private List<IGameplayActions> m_GameplayActionsCallbackInterfaces = new List<IGameplayActions>();
     private readonly InputAction m_Gameplay_UpArrow;
     private readonly InputAction m_Gameplay_DownArrow;
+    private readonly InputAction m_Gameplay_UseRedPotion;
     public struct GameplayActions
     {
         private @BatControls m_Wrapper;
         public GameplayActions(@BatControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @UpArrow => m_Wrapper.m_Gameplay_UpArrow;
         public InputAction @DownArrow => m_Wrapper.m_Gameplay_DownArrow;
+        public InputAction @UseRedPotion => m_Wrapper.m_Gameplay_UseRedPotion;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -162,6 +185,9 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
             @DownArrow.started += instance.OnDownArrow;
             @DownArrow.performed += instance.OnDownArrow;
             @DownArrow.canceled += instance.OnDownArrow;
+            @UseRedPotion.started += instance.OnUseRedPotion;
+            @UseRedPotion.performed += instance.OnUseRedPotion;
+            @UseRedPotion.canceled += instance.OnUseRedPotion;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -172,6 +198,9 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
             @DownArrow.started -= instance.OnDownArrow;
             @DownArrow.performed -= instance.OnDownArrow;
             @DownArrow.canceled -= instance.OnDownArrow;
+            @UseRedPotion.started -= instance.OnUseRedPotion;
+            @UseRedPotion.performed -= instance.OnUseRedPotion;
+            @UseRedPotion.canceled -= instance.OnUseRedPotion;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -193,5 +222,6 @@ public partial class @BatControls: IInputActionCollection2, IDisposable
     {
         void OnUpArrow(InputAction.CallbackContext context);
         void OnDownArrow(InputAction.CallbackContext context);
+        void OnUseRedPotion(InputAction.CallbackContext context);
     }
 }

@@ -28,6 +28,74 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Potions",
+            "id": "e9250ab1-3a0b-45de-aeef-9c3a032415d8",
+            "actions": [
+                {
+                    "name": "UseBluePotion",
+                    "type": "Button",
+                    "id": "09dd31b7-346d-440b-94ee-b43d2121f426",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UseRedPotion",
+                    "type": "Button",
+                    "id": "60dd3b4f-bdbf-48c7-a661-8c024606f798",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UseGreenPotion",
+                    "type": "Button",
+                    "id": "b1d1dd9c-f40c-4165-a0f5-512b2bbd29c8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "50aa9824-8057-4485-81cc-0a2d97395528",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseGreenPotion",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7cb93776-3ba9-45be-80b8-5a95486f9ce9",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseRedPotion",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "47d73848-b6cd-42d9-a2b1-df2a3fa2e0da",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseBluePotion",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

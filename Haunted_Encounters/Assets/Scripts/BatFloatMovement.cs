@@ -13,6 +13,8 @@ public class BatFloatController : MonoBehaviour
     private BatControls batControls;
     private float verticalInput = 0f;    // Variable para almacenar la entrada vertical
 
+    //private BatControlls inputActions;
+
     private void Awake()
     {
         // Inicializar los controles
