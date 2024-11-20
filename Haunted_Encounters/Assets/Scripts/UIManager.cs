@@ -6,10 +6,12 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI greenPotionText;
+    [SerializeField] TextMeshProUGUI redPotionText;
+    [SerializeField] TextMeshProUGUI bluePotionText;
 
     [SerializeField] int GreenPotionCollected;
-    int RedPotionCollected;
-    int BluePotionCollected;
+    [SerializeField] int RedPotionCollected;
+    [SerializeField] int BluePotionCollected;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,8 @@ public class UIManager : MonoBehaviour
         //Actualizar el texto del canvas con las variables
 
         greenPotionText.text = "" + GreenPotionCollected;
+        redPotionText.text = "" + RedPotionCollected;
+        bluePotionText.text = "" + BluePotionCollected;
     }
 
     public void AddGreenPotion()

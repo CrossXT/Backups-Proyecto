@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     private PlayerMovement inputActions;
 
-
+    
 
     void Awake()
     {
@@ -89,10 +89,11 @@ public class PlayerMovement : MonoBehaviour
         if (Physics.Raycast(transform.position, Vector3.forward, out hit))
         {
             Debug.Log("Hit distance " + hit.distance);
+            
 
             if (hit.distance < 0.55f)
             {
-                S
+                SceneManager.LoadScene("Level1");
             }
         }
         else
@@ -138,6 +139,12 @@ public class PlayerMovement : MonoBehaviour
         Jump.action.Disable();
     }
 
+
+    public void PotionInventory()
+    {
+
+
+    }
 
 
 }
