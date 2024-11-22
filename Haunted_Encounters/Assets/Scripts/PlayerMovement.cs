@@ -30,12 +30,15 @@ public class PlayerMovement : MonoBehaviour
 
     private int jumpCount;
 
-    //float currentVerticalVelocity;
+    private IEnumerator GreenPotionEffectTimer()
+    {
+        yield return new WaitForSeconds(effectTimer);
+        CurrentEffect = -1; // Desactivar el efecto
+        Debug.Log("Efecto de la Poción Verde Finalizado");
+    }
 
 
     private PlayerMovement inputActions;
-
-    
 
     void Awake()
     {
@@ -51,6 +54,9 @@ public class PlayerMovement : MonoBehaviour
     void OnEnable()
     {
         Jump.action.Enable();
+        UseGreenPotion.action.Enable(); 
+        UseRedPotion.action.Enable();
+        UseBluePotion.action.Enable();
 
     }
     // Update is called once per frame
@@ -73,27 +79,6 @@ public class PlayerMovement : MonoBehaviour
         //    { currentVerticalVelocity = 0f; Debug.Log("Stopped " + Time.realtimeSinceStartup); }
 
         RaycastHit hit;
-
-        if(Physics.Raycast(transform.position, -Vector3.up, out hit))
-        {
-
-
-            if(hit.distance < 0.55f)
-            {
-
-                r.material = materialGrounded;
-            }
-            else
-            {
-  
-                r.material = materialNoGrounded;
-            }
-        }
-        else
-        {
-
-            r.material = materialNoGrounded;
-        }
 
         if (Physics.Raycast(transform.position, Vector3.forward, out hit))
         {
@@ -118,36 +103,63 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         if (mustJump)
         {
+            Debug.Log("---");
+
             mustJump = false;
-            Saltar(); 
+            // Permitir saltar según el estado del jugador
+            Debug.Log(isGrounded);
+            Debug.Log(CurrentEffect);
+            Debug.Log(jumpCount);
+
+            if (isGrounded || (CurrentEffect == 1 && jumpCount < 2))
+            {
+                Saltar();
+
+            }
         }
     }
 
 
     void Saltar()
     {
-        //&& jumpCount == 1
-        if (CurrentEffect == 1)
-        {
-            Debug.Log("Saltar + efecto de pocion");
-            rb.AddForce(Vector3.up * jumpVerticalVelocity, ForceMode.Impulse);
-            isGrounded = false; // Deshabilitar el salto hasta que vuelva a estar en el suelo
-        }
+        // Realizar un salto y reducir el contador de saltos
+        jumpCount = 0;
+        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z); // Reset vertical velocity to avoid accumulated forces
+        rb.AddForce(Vector3.up * jumpVerticalVelocity, ForceMode.Impulse);
 
+        Debug.Log("Saltar: JumpCount = " + jumpCount);
+
+        if(!isGrounded)
+        {
+            jumpCount = 2;
+        }
+        else
+        {
+            jumpCount = 1;
+        }
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Terrain")) // Comparar tag para que salte una vez
+        if (other.gameObject.CompareTag("Terrain"))
         {
             isGrounded = true;
+            jumpCount = 0; // Reiniciar el contador de saltos al tocar el suelo
+        }
+        else
+        {
+            isGrounded = false;
         }
     }
     void OnDisable()
     {
         Jump.action.Disable();
+        UseGreenPotion.action.Disable();
+        UseRedPotion.action.Disable();
+        UseBluePotion.action.Disable();
     }
 
     public void PotionInventory()
@@ -156,33 +168,28 @@ public class PlayerMovement : MonoBehaviour
         UIManager UIComponent;
 
         UImenu = GameObject.FindGameObjectWithTag("UI");
-
         UIComponent = UImenu.GetComponent<UIManager>();
 
 
-        Debug.Log("Entrando en el inventario" + UIComponent.GreenPotionCollected);
-        if(UseGreenPotion.action.WasPressedThisFrame() && UIComponent.GreenPotionCollected > 0)
+        if (UseGreenPotion.action.WasPressedThisFrame() && UIComponent.GreenPotionCollected > 0)
         {
-            Debug.Log("Entrando en pocion verde");
-            //el player tiene pociones verdes y aplicaria su respectivo efecto
+            Debug.Log("Poción Verde Activada: Doble Salto Habilitado");
             CurrentEffect = 1;
-            
-
+            jumpCount = 0;
             UIComponent.RemoveGreenPotion();
+            StartCoroutine(GreenPotionEffectTimer());
         }
-        else if(UseBluePotion.action.WasPressedThisFrame() && UIComponent.BluePotionCollected > 0)
+        else if (UseBluePotion.action.WasPressedThisFrame() && UIComponent.BluePotionCollected > 0)
         {
             //el player tiene pociones azules y aplicaria su efecto
 
             UIComponent.RemoveBluePotion();
         }
-        else if(UseRedPotion.action.WasPressedThisFrame() && UIComponent.RedPotionCollected > 0)
+        else if (UseRedPotion.action.WasPressedThisFrame() && UIComponent.RedPotionCollected > 0)
         {
             //el player tiene pociones rojas y aplicaria su efecto
 
             UIComponent.RemoveRedPotion();
         }
     }
-
-
 }
