@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
 
             r.material = materialNoGrounded;
         }
-
+        //Ahora se ejecutaria el inventario
 
         PotionInventory();
 
