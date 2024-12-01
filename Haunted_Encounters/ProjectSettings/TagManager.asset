@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Terrain
   - UI
+  - Meta
   layers:
   - Default
   - TransparentFX

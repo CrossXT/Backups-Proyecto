@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform model;
 
+    public LayerMask raycastLayerMask;
+
     private Renderer r;
 
     private int effectTimer = 10;
@@ -63,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
     const float gravity = -20f;
     bool mustJump = false;
+    
     void Update()
     {
         //Velocidad Constante
@@ -79,27 +82,19 @@ public class PlayerMovement : MonoBehaviour
         //    { currentVerticalVelocity = 0f; Debug.Log("Stopped " + Time.realtimeSinceStartup); }
 
         RaycastHit hit;
-
         if (Physics.Raycast(transform.position, Vector3.forward, out hit))
         {
-    
-            
-
-            if (hit.distance < 0.55f)
+            if (!hit.collider.CompareTag("Meta") && hit.distance < 0.55f)
             {
                 SceneManager.LoadScene("Level1");
             }
         }
-        else
-        {
 
-            r.material = materialNoGrounded;
-        }
-        //Ahora se ejecutaria el inventario
 
         PotionInventory();
 
     }
+
 
     private void FixedUpdate()
     {
@@ -148,6 +143,10 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
             jumpCount = 0; // Reiniciar el contador de saltos al tocar el suelo
+        }
+        else if(other.gameObject.CompareTag("Meta"))
+        {
+            SceneManager.LoadScene("LevelSelection");
         }
         else
         {
