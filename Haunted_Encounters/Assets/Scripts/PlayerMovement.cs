@@ -86,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (!hit.collider.CompareTag("Meta") && hit.distance < 0.55f)
             {
-                SceneManager.LoadScene("Level1");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
 

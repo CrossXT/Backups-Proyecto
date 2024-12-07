@@ -8,13 +8,21 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        // Si se presiona la tecla Escape, alterna la pausa
+        // Si se presiona la tecla Escape, alterna la pausa usando Time.unscaledTime
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
                 ResumeGame();
             else
                 PauseGame();
+        }
+        else if(Input.GetKeyDown(KeyCode.X))
+        {
+            SceneManager.LoadScene("LevelSelection");
+        }
+        else if(Input.GetKeyDown(KeyCode.H))
+        {
+            SceneManager.LoadScene("Settings");
         }
     }
 
@@ -38,4 +46,3 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("Menu"); // Carga la escena del menú principal
     }
 }
-
